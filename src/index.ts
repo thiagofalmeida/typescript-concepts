@@ -1,9 +1,8 @@
 import express, { request } from 'express';
+import { welcome } from './routes';
 
 const app = express();
 
-app.get('/', (request, response) => {
-    return response.json({ message: 'Welcome Typescript!' })
-});
+app.get('/', welcome);
 
 app.listen(3333);
